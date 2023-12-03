@@ -64,7 +64,7 @@ class GithubPopularRepos extends Component {
   }
 
   renderLoadingView = () => (
-    <div testid="loader">
+    <div data-testid="loader">
       <Loader color="#0284c7" height={80} type="ThreeDots" width={80} />
     </div>
   )

@@ -2,7 +2,7 @@
 import './index.css'
 
 const LanguageFilterItem = props => {
-  const {iaActive, LanguageFilterDetails, setActiveLanguageFilterId} = props
+  const {isActive, LanguageFilterDetails, setActiveLanguageFilterId} = props
   const {id, language} = LanguageFilterDetails
   const btnClassName = isActive
     ? 'language-btn active-language-btn'
