@@ -42,16 +42,15 @@ class GithubPopularRepos extends Component {
     const response = await fetch(apiUrl)
     if (response.ok) {
       const fetchedDate = await response.json()
-      const updatedDate = fetchedDate.GithubPopular_repos.map(
-        eachRepository => ({
-          id: eachRepository.id,
-          imageUrl: eachRepository.avatar_url,
-          name: eachRepository.name,
-          starsCount: eachRepository.stars_count,
-          forksCount: eachRepository.forks_count,
-          issuesCount: eachRepository.issues_count,
-        }),
-      )
+      console.log(fetchedDate)
+      const updatedDate = fetchedDate.Popular_repos.map.map(eachRepository => ({
+        id: eachRepository.id,
+        imageUrl: eachRepository.avatar_url,
+        name: eachRepository.name,
+        starsCount: eachRepository.stars_count,
+        forksCount: eachRepository.forks_count,
+        issuesCount: eachRepository.issues_count,
+      }))
       this.setState({
         repositoriesData: updatedDate,
         apiStatus: apiStatusConstants.success,
